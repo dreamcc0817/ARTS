@@ -1,0 +1,39 @@
+# Algorithm
+#####  <br>
+
+
+```java
+	public static int removeDuplicates(int[] nums) {
+		int number = 0;
+		for (int i = 1; i < nums.length; i++) {
+			if (nums[i] != nums[number]) {
+				nums[++number] = nums[i];
+			}
+		}
+		return number + 1;
+	}
+```
+
+# Review
+
+文章标题：Top 8 Diagrams for Understanding Java<br>
+文章来源：https://www.programcreek.com/2013/09/top-8-diagrams-for-understanding-java/：<br>
+
+点评：一图胜千言，作者用图生动形象的说明了：1.String Immutability       
+2.The equals() and hashCode() Contract  3.Java Exception Class Hierarchy   4.Collections Class Hierarchy   5. Java synchronization     6.Aliasing  7.Stack and Heap  8.JVM Run-Time Data Areas等8个方面，把Java的一些特性展现出来，如果不是很理解也可以去通过相关的题目找相关的内容，内容值得推荐，但是好像有些东西已经过时，比如图8，1.7以后的版本已经不是这样，常量池移到Heap中。
+# Tip
+当我们有大量数据要传送时最好的办法是一次发出多个只传递少量信息的Ajax调用时。如果你正用一个Ajax调用发送大量数据，那么最好是结束这种做法，因为这样做并不能节约时间。<br>
+
+　　因此，需要传送大量数据能成为我们在GET和POST之间犹豫不决的理由吗？这两个方法都是为不同的目的而设计的，两者的不同也在于其使用目的。这一说法不仅适用于GET和POST的使用，也适用于其他的方法。<br>
+
+　　GET的目的就如同其名字一样是用于获取信息的。它旨在显示出页面上你要阅读的信息。浏览器会缓冲GET请求的执行结果，如果同样的GET请求再次发出，浏览器就会显示缓冲的结果而不是重新运行整个请求。这一流程不同于浏览器的处理过程，但是它是有意设计成这样以使GET调用更有效率。GET调用会检索要显示在页面中的数据，数据不会在服务器上被更改，因此重新请求相同数据的时候会得到相同的结果。<br>
+
+　　POST方法应该用于你需要更新服务器信息的地方。如某调用要更改保存在服务器上的数据，而从两个同样的POST调用返回的结果或许会完全不同，因为第二个POST调用的值与第一个的值不相同，这是由于第一个调用已经更新了其中一些值。POST调用通常会从服务器上获取响应而不是保持前一个响应的缓冲。<br>
+
+　　因此，不要用数据的量来决定是要选择GET还是POST，而应该按照目的在两者间作出选择。如果调用是要检索服务器上的数据则使用GET。如果要检索的值会随时间和更新进程的改变而改变则要在GET调用中添加一个当前时间参数，这样后面的调用才不会使用先前的不正确的缓冲。如果调用是向服务器上发送任意数据，就可以使用POST。<br>
+
+　　事实上，我们不应该不仅仅只将这个标准作为选择怎样使用GET和POST调用的标准，在处理页面处理形式的时候也可以将它作为取舍这两个调用的标准。<br>
+# Share
+30岁之前培养起自己的的核心独特能力。<br>
+在所有弱点中，最大的弱点就是害怕暴露弱点<br>
+                --《程序员修炼之道》
